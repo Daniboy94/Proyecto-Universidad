@@ -1,0 +1,99 @@
+/* Este es el archivo principal CSS, todos los cambios que se hagan aquí son globales */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --body_background: white;
+  --body_color: black;
+  --link_color: navy;
+}
+
+[data-theme="dark"] {
+  --body_background: black;
+  --body_color: white;
+  --link_color: cyan;
+  --font-color: #e1e1ff;
+  --heading-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  background-color: var(--body_background);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.btn {
+  background: #fff;
+  color: #212121;
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.btn.dark-btn {
+  background: #212ea0;
+  color: #fff;
+}
+
+.not-selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* .for_light_theme {
+  --primary-color: #302ae6;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --heading-color: #292922;
+}
+
+.for_dark_theme {
+  --primary-color: #9a97f3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --heading-color: #818cab;
+} */
+
+/* *** media query **** */
+
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btn {
+    padding-left: 14px 22px;
+  }
+}
